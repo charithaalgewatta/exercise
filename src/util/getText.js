@@ -2,7 +2,7 @@ const { getRandomWordSync, getRandomWord } = require("../../word-maker");
 const { HANDELED_ERROR_TEXT } = require("../assets/constants");
 
 /**
- * @param  {} {withErrors=false}={}
+ * @param  {Boolean} withErrors=false
  */
 const getTextSync = ({ withErrors = false } = {}) => {
   try {
@@ -12,8 +12,8 @@ const getTextSync = ({ withErrors = false } = {}) => {
   }
 };
 /**
- * @param  {} {withErrors=false
- * @param  {} slow=false}={}
+ * @param  {Boolean} withErrors=false
+ * @param  {Boolean} slow=false
  */
 const getTextAsync = async ({ withErrors = false, slow = false } = {}) => {
   try {

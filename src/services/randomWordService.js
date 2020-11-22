@@ -2,10 +2,12 @@ const { getTextAsync, getTextSync, fileWriter } = require("../util");
 const { TASK_3_FILE, TASK_2_FILE } = require("../assets/constants");
 const { performance } = require("perf_hooks");
 const fizzBuzzHelper = require("../helpers/fizzBuzzHelper");
+
 /**
- * @param  {} {fizzbuzz=false
- * @param  {} fileName
- * @param  {} withErrors=false
+ * @function Function for getting a random word synchronously.
+ * @param  {Boolean} withErrors=false
+ * @param  {String} fileName
+ * @param  {Boolean} fizzbuzz=false
  */
 const getRandomWord = ({
   withErrors = false,
@@ -25,11 +27,13 @@ const getRandomWord = ({
   const end = performance.now();
   return end - start;
 };
+
 /**
- * @param  {} {withErrors=false
- * @param  {} slow=false
- * @param  {} fileName
- * @param  {} fizzbuzz=false
+ * @function Function for getting a random word asynchronously.
+ * @param  {Boolean} withErrors=false
+ * @param  {Boolean} slow=false
+ * @param  {String} fileName
+ * @param  {Boolean} fizzbuzz=false
  */
 const getRandomWordAsync = async ({
   withErrors = false,

@@ -1,4 +1,4 @@
-const { getRandomWord, getRandomWordAsync } = require("../src/service");
+const { getRandomWord, getRandomWordAsync } = require("./services");
 const {
   TASK,
   TIME_TAKEN,
