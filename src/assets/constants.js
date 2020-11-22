@@ -21,7 +21,7 @@ const GET_WORDS_ASYNC_FIZZ_BUZZ =
 const GET_WORDS_FIZZ_BUZZ_ERR =
   "Task - 4: Get random words synchronous with Fizz Buzz with errors";
 const GET_WORDS_ASYNC_FIZZ_BUZZ_ERR =
-  "Task - 4: Get random words asynchronous with Fizz Buzz";
+  "Task - 4: Get random words asynchronous with Fizz Buzz with errors";
 const GET_WORDS_ASYNC_FIZZ_BUZZ_ERR_SLOW =
   "Task - 4: Get random words asynchronous with Fizz Buzz and slow mode on";
 module.exports = {
