@@ -6,7 +6,7 @@ const { HANDELED_ERROR_TEXT } = require("../assets/constants");
  */
 const getTextSync = ({ withErrors = false } = {}) => {
   try {
-    return getRandomWordSync(withErrors);
+    return getRandomWordSync({ withErrors });
   } catch (error) {
     return HANDELED_ERROR_TEXT;
   }
