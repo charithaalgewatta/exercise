@@ -2,6 +2,7 @@ const { getRandomWord, getRandomWordAsync } = require("./services");
 const {
   TASK,
   TIME_TAKEN,
+  FILE_NAME,
 
   TASK_1_FILE,
   TASK_2_FILE,
@@ -45,37 +46,41 @@ const {
     slow: true,
   });
 
-  console.table(
-    [
-      {
-        [TASK]: GET_WORDS,
-        [TIME_TAKEN]: task1.toFixed(3),
-      },
-      {
-        [TASK]: GET_WORDS_WITH_FIZZ_BUZZ,
-        [TIME_TAKEN]: task2.toFixed(3),
-      },
-      {
-        [TASK]: GET_WORDS_ASYNC,
-        [TIME_TAKEN]: task3Step1.toFixed(3),
-      },
-      {
-        [TASK]: GET_WORDS_ASYNC_FIZZ_BUZZ,
-        [TIME_TAKEN]: task3Step2.toFixed(3),
-      },
-      {
-        [TASK]: GET_WORDS_FIZZ_BUZZ_ERR,
-        [TIME_TAKEN]: task4FizzBuzzSyncWithErrors.toFixed(3),
-      },
-      {
-        [TASK]: GET_WORDS_ASYNC_FIZZ_BUZZ_ERR,
-        [TIME_TAKEN]: task4FizzBuzzWithErrors.toFixed(3),
-      },
-      {
-        [TASK]: GET_WORDS_ASYNC_FIZZ_BUZZ_ERR_SLOW,
-        [TIME_TAKEN]: task4FizzBuzzWithErrorsSlow.toFixed(3),
-      },
-    ],
-    [[TASK], [TIME_TAKEN]]
-  );
+  console.table([
+    {
+      [TASK]: GET_WORDS,
+      [TIME_TAKEN]: task1.toFixed(3),
+      [FILE_NAME]: TASK_1_FILE,
+    },
+    {
+      [TASK]: GET_WORDS_WITH_FIZZ_BUZZ,
+      [TIME_TAKEN]: task2.toFixed(3),
+      [FILE_NAME]: TASK_2_FILE,
+    },
+    {
+      [TASK]: GET_WORDS_ASYNC,
+      [TIME_TAKEN]: task3Step1.toFixed(3),
+      [FILE_NAME]: TASK_3_1_FILE,
+    },
+    {
+      [TASK]: GET_WORDS_ASYNC_FIZZ_BUZZ,
+      [TIME_TAKEN]: task3Step2.toFixed(3),
+      [FILE_NAME]: TASK_3_2_FILE,
+    },
+    {
+      [TASK]: GET_WORDS_FIZZ_BUZZ_ERR,
+      [TIME_TAKEN]: task4FizzBuzzSyncWithErrors.toFixed(3),
+      [FILE_NAME]: TASK_4_1_FILE,
+    },
+    {
+      [TASK]: GET_WORDS_ASYNC_FIZZ_BUZZ_ERR,
+      [TIME_TAKEN]: task4FizzBuzzWithErrors.toFixed(3),
+      [FILE_NAME]: TASK_4_2_FILE,
+    },
+    {
+      [TASK]: GET_WORDS_ASYNC_FIZZ_BUZZ_ERR_SLOW,
+      [TIME_TAKEN]: task4FizzBuzzWithErrorsSlow.toFixed(3),
+      [FILE_NAME]: TASK_4_SLOW_FILE,
+    },
+  ]);
 })();
