@@ -1,8 +1,8 @@
-const { getText, getTextSync } = require("./getText");
+const { getTextAsync, getTextSync } = require("./getText");
 const fileWriter = require("./fileWriter");
 
 module.exports = {
-  getText,
+  getTextAsync,
   getTextSync,
   fileWriter,
 };

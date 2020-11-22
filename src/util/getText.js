@@ -2,31 +2,28 @@ const { getRandomWordSync, getRandomWord } = require("../../word-maker");
 const { HANDELED_ERROR_TEXT } = require("../assets/constants");
 
 /**
- *
- * @param {*} param0
+ * @param  {} {withErrors=false}={}
  */
-const getTextSync = async ({ withErrors = false } = {}) => {
+const getTextSync = ({ withErrors = false } = {}) => {
   try {
     return getRandomWordSync(withErrors);
   } catch (error) {
     return HANDELED_ERROR_TEXT;
   }
 };
-
 /**
- * @function
- * @param {*} param0
- * @returns {string}
+ * @param  {} {withErrors=false
+ * @param  {} slow=false}={}
  */
-const getText = async ({ withErrors = false, slow = false } = {}) => {
+const getTextAsync = async ({ withErrors = false, slow = false } = {}) => {
   try {
-    return getRandomWord({ slow, withErrors });
+    return await getRandomWord({ withErrors, slow });
   } catch (error) {
     return HANDELED_ERROR_TEXT;
   }
 };
 
 module.exports = {
-  getText,
+  getTextAsync,
   getTextSync,
 };
